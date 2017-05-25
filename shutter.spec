@@ -1,6 +1,6 @@
 Name:       shutter
 Version:    0.93.1
-Release:    4%{?dist}
+Release:    4%{?dist}.R
 Summary:    GTK+2-based screenshot application written in Perl
 Group:      Applications/Multimedia
 License:    GPLv3+
