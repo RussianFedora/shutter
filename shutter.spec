@@ -12,9 +12,10 @@ BuildArch:  noarch
 BuildRequires:  desktop-file-utils
 BuildRequires:  perl
 BuildRequires:  perl-generators
-%if 0%{?fedora} || 0%{?rhel} >= 7
+%if 0%{?fedora} < 26 || 0%{?rhel} >= 7
 Requires:   gnome-web-photo
 %endif
+Requires:   ImageMagick
 Requires:   perl(Gtk2::ImageView)
 Requires:   perl(X11::Protocol::Ext::XFIXES)
 Requires:   nautilus-sendto
@@ -143,6 +144,9 @@ fi
 %{_datadir}/icons/ubuntu-mono-*/*/apps/%{name}-panel.*
 
 %changelog
+* Thu May 25 2017 Arkady L. Shane <ashejn@russianfedora.pro> - 0.93.1-4.R
+- fix dependences
+
 * Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 0.93.1-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
 
